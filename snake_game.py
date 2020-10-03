@@ -1,6 +1,7 @@
 import pygame
 import time
 import random
+import numpy
 
 pygame.init()
 
@@ -11,8 +12,8 @@ red = (255,0,0)
 green = (0,155,0)
 pink= (201,255,128)
 
-display_width = 800
-display_height  = 600
+display_width = 700
+display_height  = 500
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('Furious Snake Game')
@@ -110,7 +111,7 @@ def game_intro():
                     quit()
    
         gameDisplay.fill(white)
-        message_to_screen("Welcome to Furious Snake Game",
+        message_to_screen("Welcome to Furious Snake Game The Real Battle Ground",
                           green,
                           -100,
                           "largemed")
@@ -135,7 +136,7 @@ def game_intro():
                           180)
     
         pygame.display.update()
-        clock.tick(15)
+        clock.tick(20)
 
         
 def game_intro1():                                                                ##################################################################
@@ -266,7 +267,7 @@ def gameLoop():
                               size="large")
             
             message_to_screen("Press C to play again or Q to quit",
-                              black,
+                              blue,
                               50,
                               size="medium")
             pygame.display.update()
